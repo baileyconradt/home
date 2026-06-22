@@ -22,7 +22,7 @@ export default function Home() {
       <section>
         <div className="container-x pt-20 pb-16 md:pt-24 md:pb-20">
           <div className="grid md:grid-cols-[1.4fr_1fr] gap-12 items-center">
-            <div className="order-2 md:order-1">
+            <div className="order-2 md:order-1 min-w-0">
               <p className="eyebrow mb-4">{site.role}</p>
               <h1 className="text-5xl md:text-6xl font-bold leading-[1.05]">
                 Hi, I'm Bailey!
@@ -39,7 +39,7 @@ export default function Home() {
                   Get in touch
                 </Link>
               </div>
-              <div className="mt-8 flex gap-3">
+              <div className="mt-8 flex flex-wrap gap-3 justify-center md:justify-start">
                 {socials.map((s) => {
                   const brand = brandColors[s.icon];
                   const themeClass =

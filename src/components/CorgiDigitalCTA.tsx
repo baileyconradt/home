@@ -5,7 +5,7 @@ import { ArrowIcon } from "./Icons";
 export default function CorgiDigitalCTA() {
   return (
     <div className="card p-8 md:p-10 flex flex-col gap-6 md:flex-row md:items-center md:justify-between border-l-4 border-l-[var(--color-accent)]">
-      <div className="flex items-center gap-5">
+      <div className="flex flex-col items-center text-center gap-4 sm:flex-row sm:items-center sm:text-left sm:gap-5">
         <img
           src="/images/corgi-logo.png"
           alt="Corgi Digital logo"
