@@ -1,3 +1,19 @@
+# Vite build output
+dist
+
+# OS
+.DS_Store
+
+# Local backup of the old static site (recoverable from git history)
+legacy-site
+
+# Unused files moved out of public/ before launch (kept locally, not published)
+_removed
+
+# Local dev tooling / TS build cache
+.claude
+*.tsbuildinfo
+
 # Logs
 logs
 *.log

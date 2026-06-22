@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/images/BC-logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Default to light (like the original site); only go dark if the visitor
+         has explicitly chosen it. Applied before paint to avoid a flash. -->
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem("theme") === "dark") {
+            document.documentElement.classList.add("dark");
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <title>Bailey Conradt</title>
+    <meta
+      name="description"
+      content="Bailey Conradt — developer and musician. Web apps, client sites, and original music."
+    />
+    <meta property="og:title" content="Bailey Conradt" />
+    <meta
+      property="og:description"
+      content="Developer and musician. Web apps, client sites, and original music."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://baileyconradt.com" />
+    <meta property="og:image" content="/images/bailey_profile.jpg" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

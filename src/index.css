@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+/* Toggle dark mode by adding the `.dark` class to <html>. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---- Design tokens (light is the default) ----------------------------- */
+:root {
+  --color-ink: #f2f2f2; /* page background—off-white */
+  --color-ink-soft: #e9eaec; /* subtle raised surface */
+  --color-card: #ffffff; /* cards */
+  --color-line: #e1e3e8; /* borders */
+  --color-fg: #242424; /* primary text—charcoal */
+  --color-fg-muted: #5b626d; /* secondary text */
+  --color-accent: #007bff; /* Bootstrap primary blue */
+  --color-accent-soft: #0069d9; /* darker blue for hover / links on white */
+  --color-glow: #3998cc; /* secondary blue */
+
+  /* Navbar + footer stay charcoal in both themes, like the old site. */
+  --color-nav: #343a40;
+  --color-nav-fg: #ffffff;
+  --color-nav-muted: #b8bdc4;
+
+  --font-sans: "Avenir Next", "Avenir", "Nunito Sans", ui-sans-serif,
+    system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-display: var(--font-sans);
+
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 6px 24px rgba(0, 0, 0, 0.12);
+}
+
+.dark {
+  --color-ink: #1f232b; /* charcoal background */
+  --color-ink-soft: #262b34;
+  --color-card: #2a2f39;
+  --color-line: #3a414e;
+  --color-fg: #f2f2f2;
+  --color-fg-muted: #a6adba;
+  --color-accent: #4ea1ff;
+  --color-accent-soft: #7bbcff;
+  --color-glow: #4ea1ff;
+
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.3);
+  --shadow-card-hover: 0 6px 24px rgba(0, 0, 0, 0.45);
+}
+
+/* ---- Base ------------------------------------------------------------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Scale the whole (rem-based) UI up ~25% by default. */
+    font-size: 125%;
+  }
+  body {
+    margin: 0;
+    background-color: var(--color-ink);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: var(--color-accent);
+    color: white;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+/* ---- Reusable bits ---------------------------------------------------- */
+@layer components {
+  .container-x {
+    width: 100%;
+    max-width: 72rem;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    padding: 0.55rem 1.15rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: transform 0.12s ease, background-color 0.15s ease,
+      border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn:active {
+    transform: translateY(1px);
+  }
+  .btn-primary {
+    background: var(--color-accent);
+    color: white;
+  }
+  .btn-primary:hover {
+    background: var(--color-accent-soft);
+  }
+  .btn-ghost {
+    border: 1px solid var(--color-accent);
+    color: var(--color-accent);
+  }
+  .btn-ghost:hover {
+    background: var(--color-accent);
+    color: white;
+  }
+
+  .card {
+    background: var(--color-card);
+    border: 1px solid var(--color-line);
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-card);
+    transition: box-shadow 0.2s ease, transform 0.2s ease,
+      border-color 0.2s ease;
+  }
+  .card-hover:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-3px);
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    border: 1px solid var(--color-line);
+    color: var(--color-fg-muted);
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--color-accent);
+  }
+}
