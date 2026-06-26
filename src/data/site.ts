@@ -31,7 +31,14 @@ export type Social = {
   label: string;
   href: string;
   /** simple-icons style key used by the inline icon component */
-  icon: "github" | "linkedin" | "instagram" | "twitter" | "facebook" | "email";
+  icon:
+    | "github"
+    | "linkedin"
+    | "instagram"
+    | "twitter"
+    | "facebook"
+    | "tiktok"
+    | "email";
 };
 
 export const socials: Social[] = [
@@ -41,6 +48,7 @@ export const socials: Social[] = [
     href: "https://instagram.com/baileyswizzle",
     icon: "instagram",
   },
+  { label: "TikTok", href: "https://www.tiktok.com/@baileyconradt", icon: "tiktok" },
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/baileyconradt/",

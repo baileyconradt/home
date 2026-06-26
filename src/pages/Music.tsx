@@ -31,6 +31,13 @@ export default function Music() {
         return (
           <section key={kind} className="mb-12">
             <h2 className="text-2xl font-bold mb-5">{kind === "Cover" ? "Covers" : kind === "Original" ? "Originals" : kind}</h2>
+            {kind === "The EASTie Boys" && (
+              <img
+                src="/images/EASTieBoys.png"
+                alt="The EASTie Boys"
+                className="mb-6 w-56 max-w-full"
+              />
+            )}
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {group.map((t) => (
                 <TrackCard key={t.title} track={t} />

@@ -43,7 +43,7 @@ export default function Home() {
                 {socials.map((s) => {
                   const brand = brandColors[s.icon];
                   const themeClass =
-                    s.icon === "github"
+                    s.icon === "github" || s.icon === "tiktok"
                       ? "text-[var(--color-fg)]"
                       : s.icon === "email"
                         ? "text-[var(--color-accent)]"

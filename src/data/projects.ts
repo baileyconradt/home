@@ -116,6 +116,17 @@ export const projects: Project[] = [
     gradient: ["#0ea5e9", "#22d3ee"],
   },
   {
+    title: "WiscoGuessr",
+    category: "Web App",
+    blurb:
+      "A Wisconsin-only GeoGuessr—dropped somewhere in the Dairyland, guess where you are across 5 rounds. Cheesy, local fun.",
+    tags: ["React", "Firebase", "Game"],
+    image: "/images/projects/wiscoguessr.jpg",
+    demoUrl: "https://wisco-guesser.web.app/",
+    repoUrl: "https://github.com/baileyconradt/wiscoguessr",
+    gradient: ["#15803d", "#f59e0b"],
+  },
+  {
     title: "Ball Knower",
     category: "Web App",
     blurb:
