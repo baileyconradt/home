@@ -20,6 +20,20 @@ export const experience: Role[] = [
     href: "https://www.generalmills.com",
   },
   {
+    title: "Vice Chair",
+    org: "8th Congressional District Democrats of Wisconsin",
+    period: "June 2026 – Present",
+    blurb:
+      "Serve as Vice Chair of the 8th Congressional District Democrats of Wisconsin, supporting Democratic organizing across northeast Wisconsin.",
+  },
+  {
+    title: "Founder & Organizer",
+    org: "Young Democrats of Wisconsin—Brown County Chapter",
+    period: "July 2026 – Present",
+    blurb:
+      "Founded the Brown County chapter of the Young Democrats of Wisconsin (first meeting July 2026) to get young people involved in the political process—building community, learning about candidates and policy, and volunteering to help our area.",
+  },
+  {
     title: "Lead Digital Specialist",
     org: "Brown County Democratic Party of Wisconsin",
     period: "2022 – Present",
@@ -72,6 +86,8 @@ export const experience: Role[] = [
  * Projects); add any roles, volunteering, or organizing you want featured.
  */
 export const politicalWork: string[] = [
+  "Vice Chair of the 8th Congressional District Democrats of Wisconsin (since June 2026).",
+  "Founded the Brown County chapter of the Young Democrats of Wisconsin—getting young people involved in the political process, building community, and volunteering to help our area.",
   "Lead Digital Specialist for the Brown County Democratic Party of Wisconsin—I run the county party's website and digital presence.",
   "Contracted by the Door County Democrats of Wisconsin to design and build their website.",
   "Designed and built campaign websites for local Wisconsin candidates (Andrea Gage for Brown County Supervisor, Rick Crosson).",

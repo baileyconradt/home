@@ -87,6 +87,16 @@ export const projects: Project[] = [
     demoUrl: "https://www.stjohnash.org",
     gradient: ["#0f766e", "#0891b2"],
   },
+  {
+    title: "Nicolet Shores Resort",
+    category: "Client Site",
+    blurb:
+      "Website for Nicolet Shores Resort—a northwoods vacation destination on Spectacle Lake near Eagle River, Wisconsin. Built on WordPress with chalet and villa listings, amenities, and rental info that's easy to keep up to date.",
+    tags: ["Resort", "WordPress", "Client Site"],
+    image: "/images/projects/nicolet-shores-resort.jpg",
+    demoUrl: "https://nicoletshoresresort.com",
+    gradient: ["#166534", "#0e7490"],
+  },
 
   // ---- Mobile ----------------------------------------------------------
   {
